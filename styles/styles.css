@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --black: #000000;
+                --white: #ffffff;
+                --gray-lighter: #999999;
+                --gray-light: #666666;
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+                background: var(--black);
+                color: var(--white);
+                line-height: 1.6;
+            }
+
+            .bg-grid {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+                background-size: 50px 50px;
+                z-index: -1;
+            }
+
+            .cv-container {
+                max-width: 900px;
+                margin: 4rem auto;
+                padding: 0 2rem;
+            }
+
+            .cv-header {
+                text-align: center;
+                padding: 3rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 3rem;
+            }
+
+            .cv-name {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: clamp(2rem, 5vw, 3rem);
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+
+            .cv-title {
+                font-size: 1.25rem;
+                color: var(--gray-lighter);
+                margin-bottom: 2rem;
+            }
+
+            .cv-contact {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+
+            .cv-contact a {
+                color: var(--gray-lighter);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .cv-contact a:hover {
+                color: var(--white);
+            }
+
+            .cv-contact i {
+                margin-right: 0.5rem;
+            }
+
+            .cv-section {
+                margin-bottom: 3rem;
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeIn 0.8s forwards;
+            }
+
+            .cv-section:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .cv-section:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .cv-section:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .cv-section:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            .cv-section:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .cv-section-title {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid var(--white);
+                display: inline-block;
+            }
+
+            .cv-profile {
+                color: var(--gray-lighter);
+                line-height: 1.8;
+                font-size: 1.05rem;
+            }
+
+            .skills-grid {
+                display: grid;
+                gap: 1rem;
+            }
+
+            .skill-item {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 1rem;
+                transition: all 0.3s;
+            }
+
+            .skill-item:hover {
+                border-color: rgba(255, 255, 255, 0.3);
+                transform: translateX(5px);
+            }
+
+            .skill-label {
+                font-weight: 600;
+                color: var(--white);
+                margin-bottom: 0.5rem;
+            }
+
+            .skill-value {
+                color: var(--gray-lighter);
+            }
+
+            .project-item {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 2rem;
+                margin-bottom: 1.5rem;
+                transition: all 0.3s;
+            }
+
+            .project-item:hover {
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .project-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 0.5rem;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .project-name {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .project-link {
+                color: var(--gray-lighter);
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: color 0.3s;
+            }
+
+            .project-link:hover {
+                color: var(--white);
+            }
+
+            .project-tech {
+                color: var(--gray-light);
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin-bottom: 0.75rem;
+            }
+
+            .project-description {
+                color: var(--gray-lighter);
+            }
+
+            .experience-item {
+                margin-bottom: 2rem;
+            }
+
+            .experience-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 0.75rem;
+                flex-wrap: wrap;
+            }
+
+            .experience-title {
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+
+            .experience-company {
+                color: var(--gray-lighter);
+                margin-bottom: 0.5rem;
+            }
+
+            .experience-date {
+                color: var(--gray-light);
+                font-size: 0.9rem;
+            }
+
+            .experience-description {
+                color: var(--gray-lighter);
+            }
+
+            .education-item {
+                margin-bottom: 1.5rem;
+            }
+
+            .education-degree {
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .education-school {
+                color: var(--gray-lighter);
+            }
+
+            .languages {
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .language-item {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 1rem 2rem;
+            }
+
+            .language-name {
+                font-weight: 600;
+            }
+
+            .language-level {
+                color: var(--gray-lighter);
+                font-size: 0.9rem;
+            }
+
+            .download-btn {
+                background: var(--white);
+                color: var(--black);
+                border: 2px solid var(--white);
+                padding: 1rem 2.5rem;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.3s;
+                margin-bottom: 3rem;
+            }
+
+            .download-btn:hover {
+                background: transparent;
+                color: var(--white);
+                transform: translateY(-3px);
+            }
+
+            @media (max-width: 768px) {
+                .cv-container {
+                    margin: 2rem auto;
+                    padding: 0 1.5rem;
+                }
+
+                .cv-contact {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.75rem;
+                }
+
+                .project-header,
+                .experience-header {
+                    flex-direction: column;
+                }
+            }
