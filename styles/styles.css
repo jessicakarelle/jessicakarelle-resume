@@ -163,6 +163,7 @@ body {
 
 .project-item:hover {
     border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
 }
 
 .project-header {
@@ -258,8 +259,12 @@ body {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 2rem;
+    transition: all 0.3s ease;
 }
-
+.language-item:hover {
+    transform: translateY(-2px);
+   border-color: rgba(255, 255, 255, 0.3);
+}
 .language-name {
     font-weight: 600;
 }
